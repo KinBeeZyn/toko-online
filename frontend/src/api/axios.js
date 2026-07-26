@@ -4,7 +4,7 @@ import axios from "axios";
 // Saat deployment, isi environment variable VITE_API_URL di Netlify/Vercel
 // dengan URL backend yang sudah dideploy, contoh:
 // VITE_API_URL=https://toko-online-backend.onrender.com/api
-const API_BASE_URL = import.meta.env.VITE_API_URL || "http://localhost:5000/api";
+const API_BASE_URL = import.meta.env.VITE_API_URL || "https://toko-online-production-059a.up.railway.app/";
 
 const api = axios.create({
   baseURL: API_BASE_URL,
