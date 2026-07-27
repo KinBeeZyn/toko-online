@@ -1,3 +1,13 @@
+import { useEffect, useState } from "react";
+import api from "../api/axios";
+import ProductCard from "../components/ProductCard";
+import { PackageSearch, Loader2 } from "lucide-react";
+
+function ProductList() {
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
 useEffect(() => {
   console.log("ProductList mounted");
 
@@ -16,4 +26,4 @@ useEffect(() => {
   };
 
   fetchProducts();
-}, []);
+}, []);}
